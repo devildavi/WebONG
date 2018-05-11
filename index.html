@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="almacenApp">
+<head>
+	<meta charset="utf-8">
+		<title>Almacén</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">	
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body class="col-md-10 col-md-offset-1 container" ng-controller="mainCtrl">
+		<cabecera class="row"></cabecera>
+		<ul class="breadcrumb row">
+		  <li><a href="#">Inicio</a></li>
+		  <li><a href="#">Tienda</a></li>
+		  <li><a href="#">Articulos</a></li>
+		  <li>Ropa Masculina</li>
+		</ul>
+	<!--<lista-articulos></lista-articulos>-->
+		<ng-view class="row"></ng-view>
+</body>
+<footer>
+	<pie></pie>
+</footer>
+	<script src="plugins/angular.js"></script>
+	<script src="plugins/jquery.js"></script>	
+	<script src="plugins/angular-route.js"></script>
+	<script src="plugins/ngStorage.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/rutinas.js"></script>
+	<script src="js/protos.js"></script>
+	<script src="componentes/productos/productos.js"></script>
+	<script src="componentes/productos/fichaproducto.js"></script>
+	<script src="componentes/productos/nuevoProductoCtrl.js"></script>
+	<script src="componentes/registro/registroCtrl.js"></script>
+	<script src="componentes/tiendas/nuevaTiendaCtrl.js"></script>
+	<script src="componentes/tiendas/tiendasCtrl.js"></script>
+	<script src="componentes/login/loginCtrl.js"></script>
+	<script src="componentes/FACTORY/usuarios.js"></script>
+	<script src="componentes/eventos/eventos.js"></script>
+	<script src="componentes/eventos/nuevoEvento.js"></script>
+</html>

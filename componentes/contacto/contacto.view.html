@@ -1,0 +1,64 @@
+            <div class="row col-lg-8 col-lg-offset-2">
+                <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2>Formulario de contacto</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p class="lead">En este formulario de contacto podrás hacernos preguntas o sugerencias sobre cualquier tema para ayudar al crecimiento de IM-HELPOsNG</p>
+                            <form id="contact-form" method="post" action="contact.php" role="form">
+                                <div class="messages"></div>
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="form_name">Nombre *</label>
+                                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Porfavor introduce tu nombre *" required="required" data-error="Nombre es necesario.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="form_lastname">Apellidos *</label>
+                                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Porfavor introduce tus apellidos *" required="required" data-error="Apellidos son necesarios.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="form_email">Email *</label>
+                                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Porfavor introduce tu email *" required="required" data-error="Email es necesario.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="form_phone">Teléfono</label>
+                                                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Porfavor introduce el teléfono">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="form_message">Mensaje *</label>
+                                                <textarea id="form_message" name="message" class="form-control" placeholder="Mensaje *" rows="4" required="required" data-error="Mensaje es necesario."></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="submit" class="btn btn-warning btn-send" value="Enviar mensaje">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="text-muted"><strong>*</strong> Campos obligatorios</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div><!--panelbody-->
+                </div><!--panel-->
+            </div> <!-- /.row-->

@@ -1,0 +1,24 @@
+<div ng-app="tiendas" ng-controller="tiendasCtrl" class="row">
+	<div class="row" ng-repeat="tienda in tiendas">
+		<div class="col-md-4">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.279485863275!2d-8.689890614714047!3d42.25120373533775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f62e588cfce69%3A0x378485bfa6edd1be!2sInstituto+de+Educaci%C3%B3n+Secundaria+IES+de+Teis!5e0!3m2!1sgl!2ses!4v1524855562388" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+		<div class="col-md-6 col-md-offset-1">
+			<div class="row">
+				<div class="panel panel-success panel-articulo">
+					<div class="panel-heading">
+						{{tienda.nombre}}
+					</div>
+					<div class="panel-body">
+						<div><strong>Calle:</strong> {{tienda.direccion}}</div>
+						<div><strong>Ciudad:</strong> {{tienda.ciudad}}</div>
+						<div><strong>Código postal:</strong> {{tienda.codigo_postal}}</div>
+					</div>
+					<div class="panel-footer">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

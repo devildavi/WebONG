@@ -1,0 +1,149 @@
+<div ng-app="fichaproducto" ng-controller="fichaProductoCtrl">
+	<div class="col-lg-4">
+	<!--
+		<div class="row">
+				<div id="carFicha" class="carousel slide" data-ride="carousel">
+ 
+				  <ol class="carousel-indicators">
+				    <li data-target="#carFicha" data-slide-to="0" class="active"></li>
+				    <li data-target="#carFicha" data-slide-to="1"></li>
+				    <li data-target="#carFicha" data-slide-to="2"></li>
+				  </ol>
+
+				  <div class="carousel-inner">				    
+				    <div class="item" ng-repeat="imagen in producto.imagenes">
+				    	<img class="center-block" src="imagenes/{{imagen.ruta}}"/>					    	     
+				    </div>
+				  </div>
+
+				  <a class="left carousel-control" data-target="#carFicha" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" data-target="#carFicha" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>-->		
+		<img id="imgarticulo" src="imagenes/{{producto.imagenes[0].ruta}}" alt="foto.jpg">
+	</div>
+	<div class="col-lg-6 col-lg-offset-1" id="datosarticulo">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2>{{producto.nombre}}</h2>
+			</div>
+			<div class="panel-body">				
+				<div class="row">
+					<div class="col-md-4">
+						<p><strong>ID:</strong> {{producto.id}}</p>
+					</div>
+				</div>
+				<p>{{producto.descripcion}}</p>
+				<div class="col-md-3">
+					<label for="cantidad">Cantidad:</label>
+					<input type="number" class="form-control" id="cantidad" ng-model="cantidad">
+				</div>
+				<div class="col-md-5">
+				<div><strong>Precio:</strong></div>
+				<p id="precio">{{producto.precio}} €</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="tienda">Tienda a reservar:</label>
+							<select class="form-control" id="tienda" ng-model="idtienda"
+							ng-options="tienda.id as tienda.nombre for tienda in producto.tiendas">
+							</select>					  
+						</div>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="btn btn-warning" ng-click="reservar()"></span>Reservar <span class="glyphicon glyphicon-shopping-cart"></span></button>
+					</div>
+				 </div>
+			</div>		
+		</div><!--panel-->
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2>Stock:</h2>
+			</div>
+			<div class="panel-body">
+				<table class="table">
+				    <thead>
+				      <tr>
+				        <th>Stock</th>
+				        <th>Ciudad</th>
+				        <th>Dirección</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+					    <tr ng-repeat="tienda in producto.tiendas">
+					    	<td>{{tienda.stock}}</td>
+					    	<td>{{tienda.ciudad}}</td>
+					    	<td>{{tienda.direccion}}</td>
+					    </tr>
+				    </tbody>
+				  </table>
+			</div>		
+		</div><!--panel-->
+		<button type="button" class="btn btn-success" ng-click="editarProducto()"></span>Editar <span class="glyphicon glyphicon-pencil"></span></button>
+	</div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	      	Editar Producto
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="panel panel-warning">
+	        	<div class="panel-heading text-center">
+	        		<h2>{{producto.id}}. {{producto.nombre}}</h2>
+	        	</div>
+	        	<div class="panel-body">
+	        		<form action="valida.html" method="post" name="formulario">
+						<fieldset>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="id">ID</label>
+										<input id="id" type="text" class="form-control"
+										ng-model="producto.id"
+										value="{{producto.id}}" disabled/>
+									</div>
+								</div>
+								<div class="col-md-9">
+									<div class="form-group">
+										<label for="nombre">Nombre</label>
+										<input type="text" class="form-control"
+										ng-model="producto.nombre"
+										value="{{producto.nombre}}">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="des">Descripción</label>
+								<input type="text" class="form-control" 
+								ng-model="producto.descripcion"
+								value="{{producto.descripcion}}">
+							</div>
+							<div class="form-group">
+								<label for="grupo">Precio</label>
+								<input type="text" class="form-control" 
+								ng-model="producto.precio"
+								value="{{producto.precio}}">
+							</div>
+						</fieldset>
+					</form>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" data-dismiss="modal" class="btn btn-danger pull-left">Cancelar</button>
+	        <button type="button" data-dismiss="modal" class="btn btn-success pull-right"
+	        ng-click="modificar()">Modificar</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->

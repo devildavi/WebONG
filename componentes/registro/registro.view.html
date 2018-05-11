@@ -1,0 +1,108 @@
+	<div ng-app="registro" ng-controller="registroCtrl">
+	    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+			<form role="form">
+				<fieldset>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2>Registro:</h2>
+						</div><!--panel-heading-->
+						<div class="panel-body">
+							<hr class="colorgraph"></hr>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+			                    	<input type="text" ng-model="nif" class="form-control input-lg" placeholder="NIF (opcional)"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+			                    	<input type="text" ng-model="nombre" class="form-control input-lg" placeholder="Nombre completo"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+			                    	<input type="text" ng-model="direccion" class="form-control input-lg" placeholder="Dirección"/>
+			                    </div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+					                    	<input type="text" ng-model="provincia" class="form-control input-lg" placeholder="Provincia"/>
+					                    </div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+					                    	<input type="text" ng-model="localidad" class="form-control input-lg" placeholder="Localidad"/>
+					                    </div>
+									</div>
+					            </div>
+				        	</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+			                    	<input type="email" ng-model="email" class="form-control input-lg" placeholder="Email"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+					                <input type="text" ng-model="telefono" class="form-control input-lg" placeholder="Teléfono"/>
+					            </div>
+					        </div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+			                   		<input type="password" ng-model="password" class="form-control input-lg" placeholder="Contraseña"/>
+			                   	</div>
+			                   	 <span class="help-block">La contraseña debe tener entre 5 o 20 carácteres</span>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+			                   		<input type="password" ng-model="password2" class="form-control input-lg" placeholder="Repite la contraseña"/>
+			                   	</div>
+							</div>
+							<hr class="colorgraph"></hr>
+						</div><!--panel-body-->
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
+									<a href="" ng-click="registrarse()" class="btn btn-lg btn-default btn-block">Registrarse</a>
+								</div>
+							</div>
+						</div><!--panel-footer-->
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="modal fade" id="modalError" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+	        <h1>MENSAJE DE ERROR:</h1>
+	      </div>
+	      <div class="modal-body">
+	        <div class="panel panel-warning">
+	        	<div class="panel-heading text-center">
+	        		<p>{{mod.titulo}}</p>
+	        	</div>
+	        	<div class="panel-body">
+	        		<p>{{mod.mensaje}}</p>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" data-dismiss="modal" class="btn btn-default pull-left">Ok</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->

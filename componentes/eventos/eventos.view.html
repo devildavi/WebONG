@@ -1,0 +1,73 @@
+<div class="text-center" ng-app="eventos" ng-controller="eventosCtrl">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h1>Búsqueda de evento:</h1>
+				</div>
+				<label>Por nombre:</label>
+				<input type="text" ng-model="buscar"></input>
+				<label>Por rango de fechas:</label>
+				<form role="form">
+					<fieldset>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+					            <input type="date" ng-model="fechaInicio" class="form-control input-lg" placeholder="Fecha Inicio"/>
+				        	</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+					            <input type="date" ng-model="fechaFin" class="form-control input-lg" placeholder="Fecha Fin"/>
+				        	</div>
+						</div>
+						<button type="button" class="btn btn-warning"></span>Buscar <span class="glyphicon glyphicon-search"></span></button>						
+					</fieldset>
+				</form>
+			</div>
+			<div><a href="#nuevoEvento">Dar de alta un evento</a></div>
+		</div>
+		<div class="col-md-9">
+			<div ng-repeat="evento in eventos | filter:buscar" class="panel panel-success panel-articulo">
+				<div class="panel-heading">
+					<h1 class="text-left">{{evento.nombre}}</h1>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-4">
+							<img id="fotoEvento" src="imagenes/{{evento.ruta_imagen}}" alt="imagen">
+						</div>	
+						<div class="col-md-6 col-md-offset-2 text-left">
+							<p><strong>Descripción:</strong> {{evento.descripcion}}</p>
+							<p><strong>Fecha:</strong> {{evento.lugar.fecha}}</p>
+							<p><strong>Lugar:</strong> {{evento.lugar.espacio}} - {{evento.lugar.ciudad}} ({{evento.lugar.provincia}})</p>
+							<p><strong>Aforo:</strong> {{evento.lugar.aforo}} personas</p>
+							<p><strong>Entradas disponibles:</strong> {{evento.lugar.entradas_disponibles}}</p>
+							<p><strong>Precio entrada:</strong> {{evento.lugar.precio_entrada}} €</p>
+							<button type="button" class="btn btn-warning"></span>Reservar <span class="glyphicon glyphicon-shopping-cart"></span></button>						
+						</div>	
+					</div>
+				</div>
+				<div class="panel-footer">
+					
+				</div>
+			</div>			
+		<!--
+			<div id="ficha" class="row" style="margin-top: 20px;">
+				<div ng-repeat="producto in productos | filter:buscar" class="col-md-4">
+					<div class="panel panel-success panel-articulo">
+						<div class="panel-heading">
+							<img src="imagenes/{{producto.imagenes[0].ruta}}" alt="">
+						</div>
+						<div class="panel-body">
+							<a href="#producto/{{$index}}">{{producto.nombre | uppercase}}</a>
+							<p>{{producto.descripcion}}</p>
+						</div>
+						<div class="panel-footer">{{producto.precio | currency:'€'}}</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+	</div><!--row para articulos-->
+</div>

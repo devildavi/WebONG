@@ -1,0 +1,178 @@
+#carFicha{
+    height: 375px;
+    width: 430px;
+}
+
+#categorias {
+  margin-top: 20px;
+}
+
+/*body{
+  background-color: #cccccc;
+  background-image: url("../imagenes/paisajeafricano.jpg");
+  background-repeat: no-repeat;
+}*/
+
+#ficha > .col-md-4 {
+  padding: 4px;
+}
+
+/* ------------------------------- TITULOS -------------------------------*/
+
+.panel-articulo > .panel-body > a, .carousel-caption > a{
+  color:  #ff6600;/*Naranja oscuro*/
+}
+
+/* ------------------------------- NAVBAR -------------------------------*/
+.navbar{
+  border-color: transparent;
+  background-color: #ffffe6; 
+
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  /*border-bottom: solid #c56200;*/
+  background-color: #ffa64d ;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  background-color: #ffa64d; 
+}
+
+.navbar-brand > img {
+  margin-top: -23px;
+	 width: 125px;
+	 height: 70px;
+}
+
+.nav > li{
+  margin-right: 10px;
+}
+
+.panel-body > .navbar > .container-fluid > ul > li {
+  width: 100%;
+}
+
+/* ------------------------------- COLORES-------------------------------*/
+
+.naranjaPrimary{
+  background-color: #ffa64d;
+}
+
+/* ------------------------------- BREADCRUMB -------------------------------*/
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #ffffe6;
+    border: 3px solid orange;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: orange;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* ------------------------------- TABLA -------------------------------*/
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color:  #ffffcc;
+}
+
+/* ------------------------------- <P CLASS="NUMERO"> -------------------------------*/
+
+.numero{
+  padding-left: 100px;
+}
+
+/* ------------------------------- PANEL -------------------------------*/
+
+.panel-success > .panel-heading , .panel-success > .panel-footer {
+    color: white;
+    background-color: #ffa64d;
+    border-color: #ffc246;
+}
+
+.panel-success{
+    border-color: #ffc246;
+    background-color: #ffffe6;
+}
+
+.panel-articulo > .panel-heading > img {
+  width: 150px;
+  height: 150px;
+}
+
+.panel-articulo > .panel-footer {
+  font-size: 30px;
+}
+
+.panel-success > .panel-body {
+  font-size: 20px;
+}
+
+.panel-success > .panel-body > .col-md-6 > p {
+  padding-bottom: 10px;
+}
+
+/* ------------------------------- SECCION -------------------------------*/
+
+section {
+    padding: 8rem 0;
+}
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #ff9100,#ff9100 12.5%);
+}
+
+/* ------------------------------- SECCION -------------------------------*/
+
+#imgarticulo{
+  width: 350px;
+  height: 350px;
+}
+
+#precio{
+  font-size: 40px;
+  color: #ffa64d;
+}
+
+/* ------------------------------- FICHA ARTICULO -------------------------------*/
+
+#datosarticulo > .panel-success > .panel-body > .form-group {
+  margin-bottom: 0px;
+}
+
+#datosarticulo > .panel-success > .panel-body > .col-md-4 > button {
+  margin-top: 30px;
+  margin-left: -15px;
+}
+
+/* ------------------------------- EVENTOS -------------------------------*/
+
+#fotoEvento {
+  width: 350px;
+  height: 250px;
+}

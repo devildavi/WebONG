@@ -1,0 +1,101 @@
+<div ng-app="nuevoProducto" ng-controller="nuevoProductoCtrl">
+	    <div class="col-md-6 col-md-offset-1">
+			<form role="form" name="formProducto">
+				<fieldset>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2>Nuevo Producto:</h2>
+						</div><!--panel-heading-->
+						<div class="panel-body">
+							<hr class="colorgraph"></hr>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+			                    	<input type="text" ng-model="datos.nombre" class="form-control input-lg" required placeholder="Nombre"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+			                    	<input type="text" ng-model="datos.descripcion" class="form-control input-lg" placeholder="Descripción"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+			                    	<input type="text" ng-model="datos.precio" class="form-control input-lg" placeholder="Precio"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+							  <label for="categoria">Categoría:</label>
+							  <select class="form-control" id="categoria" ng-model="datos.categoria"
+							  ng-options="categoria.id as categoria.nombre for categoria in categorias">
+							  </select>					  
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+			                    	<input type="email" ng-model="datos.fechafin" class="form-control input-lg" placeholder="Fecha fin de campaña (opcional)"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+			                    	<input type="text" ng-model="datos.imagen" class="form-control input-lg" placeholder="Ruta imagen"/>
+			                    </div>
+							</div>
+							<!--<input type="file"/>-->
+							<hr class="colorgraph"></hr>
+						</div><!--panel-body-->
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
+									<a href="" ng-click="daralta()" class="btn btn-lg btn-default btn-block">Dar de alta</a>
+								</div>
+							</div>
+						</div><!--panel-footer-->
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div class="col-md-4">
+			<form role="form">
+				<fieldset>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2>Asociar disponibilidad:</h2>
+						</div><!--panel-heading-->
+						<div class="panel-body">
+							<hr class="colorgraph"></hr>
+							<div class="form-group">
+							  <label for="tienda">Tienda:</label>
+							  <select class="form-control" id="tienda" ng-model="datos.idtienda"
+							  ng-options="tienda.id as tienda.nombre for tienda in tiendas">
+							  </select>					  
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+					                <input type="text" ng-model="datos.stock" class="form-control input-lg" placeholder="Stock"/>
+					            </div>
+							</div>
+							<div class="form-group">
+								<label for="estado">Estado:</label>
+								<select class="form-control" id="estado" ng-model="datos.estado"
+								ng-options="estado.id as estado.nombre for estado in estados">
+								</select>					  
+							</div>
+							<hr class="colorgraph"></hr>
+						</div><!--panel-body-->
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
+									<a href="" ng-click="daralta()" class="btn btn-lg btn-default btn-block">Asignar</a>
+								</div>
+							</div>
+						</div><!--panel-footer-->
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>

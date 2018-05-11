@@ -1,0 +1,120 @@
+<div ng-app="nuevoEvento" ng-controller="nuevoEventoCtrl">
+	<div class="row">
+	    <div class="col-md-6">
+			<form role="form">
+				<fieldset>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2>Datos del evento:</h2>
+						</div><!--panel-heading-->
+						<div class="panel-body">
+							<hr class="colorgraph"></hr>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+			                    	<input type="text" ng-model="datos.nombre" class="form-control input-lg" placeholder="Nombre"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+			                    	<input type="text" ng-model="datos.descripcion" class="form-control input-lg" placeholder="Descripción"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+					                <input type="text" ng-model="datos.ruta_imagen" class="form-control input-lg" placeholder="Imagen de portada"/>
+					            </div>
+							</div>
+							<hr class="colorgraph"></hr>
+						</div><!--panel-body-->
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
+									<a href="" ng-click="nuevoEvento()" class="btn btn-lg btn-default btn-block">Dar de alta</a>
+								</div>
+							</div>
+						</div><!--panel-footer-->
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<form role="form">
+				<fieldset>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2>Localización:</h2>
+						</div><!--panel-heading-->
+						<div class="panel-body">
+							<hr class="colorgraph"></hr>
+							<div class="form-group">
+								<label for="lugar">Lugar:</label>
+								<select class="form-control" id="lugar" ng-model="datos.lugar"
+								ng-options="lugar.id as lugar.lugar for lugar in lugares">
+								</select>					  
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+			                    	<input type="date" ng-model="datos.fecha" class="form-control input-lg" placeholder="Fecha realización"/>
+			                    </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+					                <input type="text" ng-model="datos.aforo" class="form-control input-lg" placeholder="Aforo máximo"/>
+					            </div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+					                <input type="text" ng-model="datos.precioEntrada" class="form-control input-lg" placeholder="Precio entrada"/>
+					            </div>
+							</div>
+							<hr class="colorgraph"></hr>
+						</div><!--panel-body-->
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
+									<a href="" ng-click="asignarLugar()" class="btn btn-lg btn-default btn-block">Asignar</a>
+								</div>
+							</div>
+						</div><!--panel-footer-->
+					</div>
+				</fieldset>
+			</form>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<form role="form">
+				<fieldset>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2>Participantes:</h2>
+						</div><!--panel-heading-->
+						<div class="panel-body">
+							<hr class="colorgraph"></hr>
+							<div class="form-group">
+							  <label for="parti">Participante:</label>
+							  <select multiple class="form-control" id="parti" ng-model="participantes"
+							  ng-options="parti.id as parti.nombre for parti in participantes">
+							  </select>					  
+							</div>
+							<hr class="colorgraph"></hr>
+						</div><!--panel-body-->
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2">
+									<a href="" ng-click="asignarParticipantes()" class="btn btn-lg btn-default btn-block">Asignar</a>
+								</div>
+							</div>
+						</div><!--panel-footer-->
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
