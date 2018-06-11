@@ -1,2 +1,2 @@
-# WebONG
-ONG website for the DAW final project
+# ONG Website
+ONG website for the Vocational training final project of Web Application Development
